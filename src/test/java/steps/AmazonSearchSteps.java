@@ -5,21 +5,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class AmazonSearch{
+public class AmazonSearchSteps extends StepsBase{
 
     @Given("The user navigate to www.amazom.com")
     public void theUserNavigateToWwwAmazomCom() {
-        
+        amazonSearchPage.navigateToAmazon();
     }
 
-    @When("Searches for <product>")
-    public void searchesForProduct() {
-        
+    @When("Searches for {string}")
+    public void searchesFor(String product) {
+        amazonSearchPage.enterSearchCriteria(product);
+        amazonSearchPage.clickSearch();
     }
 
     @And("Navigates to the third page")
     public void navigatesToTheThirdPage() {
-        
+        amazonSearchPage.goToThirdPage(3);
     }
 
     @And("Select the second item")
@@ -31,5 +32,6 @@ public class AmazonSearch{
     public void theUserIsAbleToAddItToTheCart() {
         
     }
+
 
 }

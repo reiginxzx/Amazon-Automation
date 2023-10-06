@@ -15,11 +15,11 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        System.out.print("se leyo hooks");
+        System.out.print("Se inicio la prueba");
         System.setProperty("webdriver.chrome.driver","src/test/resources/web_drivers/chromedriver.exe");
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
-        webDriver.get("https://www.amazon.com");
+        //webDriver.get("https://www.amazon.com");
 
         
     }
