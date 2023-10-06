@@ -11,11 +11,13 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {"steps"},
+    stepNotifications = true,
     snippets = CAMELCASE
     
 )
 
 
 public class Runner {
+
     
 }
