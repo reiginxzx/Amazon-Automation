@@ -8,5 +8,9 @@ public class StepsBase {
     protected WebDriver driver=Hooks.getDriver();
 
     protected AmazonSearchPage amazonSearchPage = new AmazonSearchPage(driver);
+
+
+
+
     
 }

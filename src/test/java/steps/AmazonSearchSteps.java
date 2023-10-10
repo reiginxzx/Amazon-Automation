@@ -3,6 +3,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 
 public class AmazonSearchSteps extends StepsBase{
@@ -25,12 +26,13 @@ public class AmazonSearchSteps extends StepsBase{
 
     @And("Select the second item")
     public void selectTheSecondItem() {
-        
+        amazonSearchPage.pickSecondItem();
     }
 
     @Then("The user is able to add it to the cart")
     public void theUserIsAbleToAddItToTheCart() {
-        
+        amazonSearchPage.addToCart();
+        Assert.assertEquals("Agregado al carrito",amazonSearchPage.addedMsgText());
     }
 
 

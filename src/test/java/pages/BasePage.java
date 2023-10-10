@@ -1,8 +1,13 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+import java.time.Duration;
+import java.util.function.Function;
 
 public class BasePage {
 
@@ -28,12 +33,20 @@ public class BasePage {
         driver.findElement(locator).click();
     }
 
-    public boolean isDisplayed(By locator) throws Exception {
-        try{
-            return driver.findElement(locator).isDisplayed();
-        }catch (Exception e){
-            throw new Exception("No se encontro el elemento");
-        }
+    public boolean isDisplayed(By locator){
+
+        Wait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(9))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+
+        return fwait.until(new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.findElement(locator).isDisplayed();
+            }
+        });
+
 
     }
 
@@ -41,7 +54,6 @@ public class BasePage {
     public void visit(String url){
         driver.get(url);
     }
-
 
 
 
