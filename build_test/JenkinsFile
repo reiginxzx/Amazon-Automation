@@ -6,9 +6,7 @@ pipeline{
 
         stage('test'){
             steps{
-                dir("demo"){
                 bat "mvn clean compile test"
-                }
             }
         }
 
