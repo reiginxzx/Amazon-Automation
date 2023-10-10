@@ -13,6 +13,7 @@ public class Hooks {
     private int numberOfScenario=0;
 
 
+
     @Before
     public void setUp() {
         System.out.print("Se inicio la prueba");

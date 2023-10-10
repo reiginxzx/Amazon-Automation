@@ -6,7 +6,7 @@ pipeline{
 
         stage('test'){
             steps{
-                bat "mvn clean compile test"
+                bat "mvn clean compile test -Dtest=”Runner”"
             }
         }
 
