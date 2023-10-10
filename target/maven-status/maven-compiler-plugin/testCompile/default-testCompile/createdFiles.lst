@@ -1,0 +1,6 @@
+runner\Runner.class
+pages\BasePage.class
+steps\StepsBase.class
+pages\AmazonSearchPage.class
+steps\AmazonSearchSteps.class
+steps\Hooks.class
