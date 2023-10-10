@@ -6,7 +6,9 @@ pipeline{
 
         stage('test'){
             steps{
+                dir("build_test"){
                 sh "mvn clean compile test"
+                }
             }
         }
 
