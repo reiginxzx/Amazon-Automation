@@ -25,6 +25,7 @@ public class AmazonSearchPage extends BasePage{
         navigateTo("https://www.amazon.com");
     }
     public void enterSearchCriteria(String product){
+        isDisplayed(searchBoxLocator);
         write(product,searchBoxLocator);
     }
 
