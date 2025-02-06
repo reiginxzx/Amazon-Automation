@@ -36,7 +36,7 @@ public class BasePage {
     public boolean isDisplayed(By locator){
 
         Wait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
-                .withTimeout(Duration.ofSeconds(9))
+                .withTimeout(Duration.ofSeconds(6))
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(NoSuchElementException.class);
 

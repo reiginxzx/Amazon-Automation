@@ -9,10 +9,10 @@ public class AmazonSearchPage extends BasePage{
     By searchBoxLocator = By.id("twotabsearchtextbox");
     By btnSearchLocator = By.id("nav-search-submit-button");
 
-    By itemListLocator = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/h2[1]/a[1]/span[1]");
+    By itemListLocator = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[10]/div[1]/div[1]/span[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/span[1]/a[1]/div[1]/img[1]");
 
     By btnAddToCardLocator = By.id("add-to-cart-button");
-    By addedToCartLocator =  By.xpath("//span[contains(text(),'Agregado al carrito')]");
+    By addedToCartLocator =  By.xpath("//h1[normalize-space()='Added to cart']");
     //By pageLinkTextLocator = By.linkText("3");
 
 

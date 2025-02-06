@@ -4,10 +4,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.junit.Test;
 
 
 public class AmazonSearchSteps extends StepsBase{
 
+    @Test
     @Given("The user navigate to www.amazom.com")
     public void theUserNavigateToWwwAmazomCom() {
         amazonSearchPage.navigateToAmazon();
@@ -32,7 +34,7 @@ public class AmazonSearchSteps extends StepsBase{
     @Then("The user is able to add it to the cart")
     public void theUserIsAbleToAddItToTheCart() {
         amazonSearchPage.addToCart();
-        Assert.assertEquals("Agregado al carrito",amazonSearchPage.addedMsgText());
+        Assert.assertEquals("Added to cart",amazonSearchPage.addedMsgText());
     }
 
 

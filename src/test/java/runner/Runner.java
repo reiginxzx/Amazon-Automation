@@ -12,7 +12,8 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
     features = "src/test/resources/features",
     glue = {"steps"},
     stepNotifications = true,
-    snippets = CAMELCASE
+    snippets = CAMELCASE,
+    plugin ={"pretty","html:target/cucumber-reports/report.html"}
     
 )
 
